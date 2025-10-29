@@ -1,0 +1,1443 @@
+<!DOCTYPE html>
+<!-- saved from url=(0115)file:///C:/Users/barbi/AppData/Local/Temp/28015aba-9623-4b77-a46d-aee9bde5f5b4_astro-barbie-site.zip.5b4/index.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Astro Barbie Tarot | Celestial Guidance &amp; Mystical Readings</title>
+    <link href="./Astro Barbie Tarot _ Celestial Guidance &amp; Mystical Readings_files/css2" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --hot-pink: #E0218A;
+            --barbie-pink: #FF1493;
+            --light-pink: #FF69B4;
+            --soft-pink: #FFB6D9;
+            --pink-glow: #FFB6C1;
+            --gold: #FFD700;
+            --purple: #DA70D6;
+            --white: #FFFFFF;
+            --cream: #FFF8F0;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #FF1493 0%, #FF69B4 25%, #FFB6D9 50%, #FF69B4 75%, #FF1493 100%);
+            color: var(--white);
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        /* Animated starry background */
+        .stars {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .star {
+            position: absolute;
+            background: white;
+            border-radius: 50%;
+            animation: twinkle 3s infinite;
+        }
+
+        @keyframes twinkle {
+            0%, 100% { opacity: 0.3; transform: scale(1); }
+            50% { opacity: 1; transform: scale(1.2); }
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: linear-gradient(135deg, #E0218A 0%, #FF1493 100%);
+            backdrop-filter: blur(10px);
+            padding: 1rem 2rem;
+            z-index: 1000;
+            box-shadow: 0 6px 30px rgba(224, 33, 138, 0.6), 0 0 40px rgba(255, 105, 180, 0.4);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'Fredoka One', cursive;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--white);
+            text-shadow: 3px 3px 6px rgba(224, 33, 138, 0.6), 0 0 20px rgba(255, 182, 217, 0.8);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .nav-links a:hover {
+            color: var(--gold);
+            text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--gold);
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--white);
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 6rem 2rem 4rem;
+            position: relative;
+            background: radial-gradient(circle at 50% 50%, rgba(255, 20, 147, 0.4) 0%, rgba(255, 105, 180, 0.3) 50%, transparent 70%);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 10;
+            max-width: 900px;
+        }
+
+        .hero h1 {
+            font-family: 'Pacifico', cursive;
+            font-size: 5rem;
+            font-weight: 700;
+            color: var(--white);
+            margin-bottom: 1rem;
+            text-shadow: 4px 4px 8px rgba(224, 33, 138, 0.8), 0 0 60px rgba(255, 182, 217, 0.9), 0 0 80px rgba(255, 20, 147, 0.6);
+            animation: float 4s ease-in-out infinite;
+        }
+
+        .hero .tagline {
+            font-family: 'Righteous', cursive;
+            font-size: 1.5rem;
+            color: var(--white);
+            margin-bottom: 1.5rem;
+            font-weight: 400;
+            letter-spacing: 2px;
+            text-shadow: 2px 2px 4px rgba(224, 33, 138, 0.6);
+        }
+
+        .hero .welcome {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 2.5rem;
+            color: var(--cream);
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 1rem 2.5rem;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--barbie-pink), var(--purple));
+            color: var(--white);
+            box-shadow: 0 4px 20px rgba(255, 105, 180, 0.4);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 30px rgba(255, 105, 180, 0.6);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--gold);
+            border: 2px solid var(--gold);
+            box-shadow: 0 4px 20px rgba(255, 215, 0, 0.2);
+        }
+
+        .btn-secondary:hover {
+            background: var(--gold);
+            color: var(--deep-blue);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 30px rgba(255, 215, 0, 0.4);
+        }
+
+        /* Moon decoration */
+        .moon {
+            position: absolute;
+            top: 15%;
+            right: 10%;
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--soft-pink) 0%, var(--light-pink) 100%);
+            box-shadow: 0 0 60px rgba(255, 182, 193, 0.6), inset -10px -10px 30px rgba(0, 0, 0, 0.2);
+            animation: float 6s ease-in-out infinite;
+        }
+
+        /* Section Styling */
+        section {
+            padding: 5rem 2rem;
+            position: relative;
+            z-index: 10;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-header h2 {
+            font-family: 'Fredoka One', cursive;
+            font-size: 3.5rem;
+            color: var(--white);
+            margin-bottom: 1rem;
+            text-shadow: 3px 3px 6px rgba(224, 33, 138, 0.7), 0 0 30px rgba(255, 182, 217, 0.8);
+        }
+
+        .section-header p {
+            font-size: 1.1rem;
+            color: var(--light-pink);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .divider {
+            width: 100px;
+            height: 3px;
+            background: linear-gradient(90deg, transparent, var(--gold), transparent);
+            margin: 2rem auto;
+        }
+
+        /* Services Section */
+        .services {
+            background: radial-gradient(circle at 30% 50%, rgba(255, 20, 147, 0.25) 0%, rgba(255, 105, 180, 0.15) 50%, transparent 70%);
+        }
+
+        .services-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .service-category {
+            margin-bottom: 4rem;
+        }
+
+        .category-title {
+            font-family: 'Righteous', cursive;
+            font-size: 2.3rem;
+            color: var(--white);
+            margin-bottom: 2rem;
+            text-align: center;
+            position: relative;
+            text-shadow: 2px 2px 4px rgba(224, 33, 138, 0.7), 0 0 20px rgba(255, 105, 180, 0.6);
+        }
+
+        .category-title::before {
+            content: '✨';
+            margin-right: 0.5rem;
+        }
+
+        .category-title::after {
+            content: '✨';
+            margin-left: 0.5rem;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            background: linear-gradient(135deg, rgba(255, 20, 147, 0.3) 0%, rgba(255, 105, 180, 0.25) 100%);
+            border: 3px solid rgba(224, 33, 138, 0.6);
+            border-radius: 25px;
+            padding: 2rem;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(224, 33, 138, 0.4), inset 0 0 30px rgba(255, 182, 217, 0.2);
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255, 215, 0, 0.1) 0%, transparent 70%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .service-card:hover::before {
+            opacity: 1;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            border-color: var(--hot-pink);
+            box-shadow: 0 15px 50px rgba(224, 33, 138, 0.6), 0 0 60px rgba(255, 105, 180, 0.4), inset 0 0 40px rgba(255, 182, 217, 0.3);
+        }
+
+        .service-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .service-card h3 {
+            font-family: 'Righteous', cursive;
+            font-size: 1.6rem;
+            color: var(--white);
+            margin-bottom: 0.5rem;
+            text-shadow: 2px 2px 4px rgba(224, 33, 138, 0.5);
+        }
+
+        .service-card p {
+            color: var(--white);
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+
+        .service-price {
+            font-family: 'Fredoka One', cursive;
+            font-size: 1.8rem;
+            color: var(--gold);
+            text-align: center;
+            margin: 1rem 0;
+            text-shadow: 2px 2px 4px rgba(224, 33, 138, 0.6), 0 0 15px rgba(255, 215, 0, 0.4);
+        }
+
+        .book-btn {
+            padding: 0.9rem 1.8rem;
+            background: linear-gradient(135deg, #E0218A 0%, #FF1493 100%);
+            color: var(--white);
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            font-family: 'Fredoka One', cursive;
+            font-size: 1rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            width: 100%;
+            box-shadow: 0 6px 20px rgba(224, 33, 138, 0.5), inset 0 -2px 8px rgba(0, 0, 0, 0.2);
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+        }
+
+        .book-btn:hover {
+            transform: scale(1.08);
+            box-shadow: 0 10px 35px rgba(224, 33, 138, 0.7), 0 0 40px rgba(255, 105, 180, 0.6);
+            background: linear-gradient(135deg, #FF1493 0%, #FF69B4 100%);
+        }
+
+        /* About Section */
+        .about {
+            background: radial-gradient(circle at 70% 50%, rgba(255, 20, 147, 0.3) 0%, rgba(255, 105, 180, 0.2) 50%, transparent 70%);
+        }
+
+        .about-container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: linear-gradient(135deg, rgba(255, 20, 147, 0.3) 0%, rgba(255, 105, 180, 0.25) 100%);
+            border: 3px solid var(--gold);
+            border-radius: 30px;
+            padding: 3rem;
+            position: relative;
+            box-shadow: 0 15px 40px rgba(224, 33, 138, 0.4), inset 0 0 30px rgba(255, 182, 217, 0.3);
+        }
+
+        .about-container::before {
+            content: '🌙';
+            position: absolute;
+            top: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 3rem;
+        }
+
+        .about-content {
+            font-size: 1.15rem;
+            line-height: 1.9;
+            color: var(--cream);
+            text-align: center;
+        }
+
+        .about-content p {
+            margin-bottom: 1.5rem;
+        }
+
+        .mission {
+            margin-top: 2rem;
+            padding: 2rem;
+            background: rgba(255, 20, 147, 0.25);
+            border: 3px solid var(--gold);
+            border-radius: 20px;
+            box-shadow: 0 8px 20px rgba(224, 33, 138, 0.3);
+        }
+
+        .mission h3 {
+            font-family: 'Righteous', cursive;
+            color: var(--white);
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(224, 33, 138, 0.6);
+        }
+
+        /* Contact Section */
+        .contact {
+            background: radial-gradient(circle at 50% 50%, rgba(255, 20, 147, 0.3) 0%, rgba(255, 105, 180, 0.2) 50%, transparent 70%);
+        }
+
+        .contact-container {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .contact-form {
+            background: linear-gradient(135deg, rgba(255, 20, 147, 0.3) 0%, rgba(255, 105, 180, 0.25) 100%);
+            border: 3px solid var(--hot-pink);
+            border-radius: 25px;
+            padding: 2.5rem;
+            box-shadow: 0 12px 35px rgba(224, 33, 138, 0.4), inset 0 0 30px rgba(255, 182, 217, 0.2);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: var(--white);
+            font-weight: 600;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.9rem;
+            background: rgba(255, 255, 255, 0.9);
+            border: 3px solid rgba(224, 33, 138, 0.5);
+            border-radius: 15px;
+            color: #333;
+            font-family: 'Poppins', sans-serif;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--gold);
+            box-shadow: 0 0 20px rgba(255, 215, 0, 0.6);
+            background: rgba(255, 255, 255, 1);
+        }
+
+        .form-group textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+
+        .form-group select option {
+            background: var(--deep-blue);
+            color: var(--cream);
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 1.2rem;
+            background: linear-gradient(135deg, #E0218A 0%, #FF1493 100%);
+            color: var(--white);
+            border: none;
+            border-radius: 30px;
+            font-family: 'Fredoka One', cursive;
+            font-size: 1.2rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 25px rgba(224, 33, 138, 0.6), inset 0 -2px 8px rgba(0, 0, 0, 0.2);
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-5px) scale(1.02);
+            box-shadow: 0 12px 40px rgba(224, 33, 138, 0.8), 0 0 50px rgba(255, 105, 180, 0.6);
+            background: linear-gradient(135deg, #FF1493 0%, #FF69B4 100%);
+        }
+
+        .contact-info {
+            margin-top: 3rem;
+            text-align: center;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .social-links a {
+            color: var(--light-pink);
+            font-size: 2rem;
+            transition: all 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: var(--gold);
+            transform: scale(1.2);
+            filter: drop-shadow(0 0 10px rgba(255, 215, 0, 0.5));
+        }
+
+        /* Footer */
+        footer {
+            background: rgba(255, 105, 180, 0.2);
+            padding: 2rem;
+            text-align: center;
+            position: relative;
+            z-index: 10;
+            border-top: 2px solid rgba(255, 215, 0, 0.3);
+        }
+
+        footer p {
+            color: var(--light-pink);
+            font-size: 0.9rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-links {
+                position: fixed;
+                top: 70px;
+                right: -100%;
+                flex-direction: column;
+                background: rgba(255, 105, 180, 0.98);
+                width: 200px;
+                padding: 2rem;
+                border-radius: 10px 0 0 10px;
+                transition: right 0.3s ease;
+                box-shadow: -5px 5px 20px rgba(0, 0, 0, 0.3);
+            }
+
+            .nav-links.active {
+                right: 0;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero .tagline {
+                font-size: 1rem;
+            }
+
+            .hero .welcome {
+                font-size: 1rem;
+            }
+
+            .moon {
+                width: 80px;
+                height: 80px;
+                top: 10%;
+                right: 5%;
+            }
+
+            .section-header h2 {
+                font-size: 2rem;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+            }
+
+            .btn {
+                width: 100%;
+                max-width: 300px;
+            }
+        }
+
+        /* Success message */
+        .success-message {
+            display: none;
+            padding: 1rem;
+            background: rgba(147, 112, 219, 0.3);
+            border: 2px solid var(--gold);
+            border-radius: 10px;
+            color: var(--gold);
+            text-align: center;
+            margin-top: 1rem;
+            animation: fadeIn 0.5s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Modal Styles */
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(224, 33, 138, 0.7);
+            backdrop-filter: blur(8px);
+            z-index: 2000;
+            justify-content: center;
+            align-items: center;
+            padding: 1rem;
+            overflow-y: auto;
+        }
+
+        .modal-overlay.active {
+            display: flex;
+        }
+
+        .modal-content {
+            background: linear-gradient(135deg, #FF1493 0%, #FF69B4 100%);
+            border: 4px solid var(--gold);
+            border-radius: 30px;
+            padding: 2.5rem;
+            max-width: 600px;
+            width: 100%;
+            max-height: 90vh;
+            overflow-y: auto;
+            position: relative;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5), 0 0 80px rgba(255, 182, 217, 0.6), inset 0 0 40px rgba(255, 255, 255, 0.2);
+            animation: modalSlideIn 0.4s ease;
+        }
+
+        @keyframes modalSlideIn {
+            from {
+                opacity: 0;
+                transform: scale(0.8) translateY(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1) translateY(0);
+            }
+        }
+
+        .modal-header {
+            text-align: center;
+            margin-bottom: 2rem;
+            border-bottom: 3px solid rgba(255, 215, 0, 0.5);
+            padding-bottom: 1rem;
+        }
+
+        .modal-header h3 {
+            font-family: 'Fredoka One', cursive;
+            font-size: 2rem;
+            color: var(--white);
+            margin-bottom: 0.5rem;
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.4);
+        }
+
+        .modal-price {
+            font-family: 'Pacifico', cursive;
+            font-size: 2.5rem;
+            color: var(--gold);
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5), 0 0 20px rgba(255, 215, 0, 0.5);
+        }
+
+        .modal-section {
+            margin-bottom: 2rem;
+        }
+
+        .modal-section h4 {
+            font-family: 'Righteous', cursive;
+            font-size: 1.3rem;
+            color: var(--white);
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .modal-form-group {
+            margin-bottom: 1rem;
+        }
+
+        .modal-form-group label {
+            display: block;
+            margin-bottom: 0.4rem;
+            color: var(--white);
+            font-weight: 600;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+        }
+
+        .modal-form-group input,
+        .modal-form-group select,
+        .modal-form-group textarea {
+            width: 100%;
+            padding: 0.8rem;
+            background: rgba(255, 255, 255, 0.95);
+            border: 3px solid rgba(224, 33, 138, 0.5);
+            border-radius: 15px;
+            color: #333;
+            font-family: 'Poppins', sans-serif;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+        }
+
+        .modal-form-group input:focus,
+        .modal-form-group select:focus,
+        .modal-form-group textarea:focus {
+            outline: none;
+            border-color: var(--gold);
+            box-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
+            background: rgba(255, 255, 255, 1);
+        }
+
+        .modal-form-group textarea {
+            min-height: 100px;
+            resize: vertical;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+
+        .modal-buttons {
+            display: flex;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .modal-btn {
+            flex: 1;
+            padding: 1rem;
+            border: none;
+            border-radius: 25px;
+            font-family: 'Fredoka One', cursive;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .modal-btn-primary {
+            background: linear-gradient(135deg, var(--gold) 0%, #FFD700 100%);
+            color: #333;
+            box-shadow: 0 6px 20px rgba(255, 215, 0, 0.5);
+        }
+
+        .modal-btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(255, 215, 0, 0.7);
+        }
+
+        .modal-btn-secondary {
+            background: rgba(255, 255, 255, 0.3);
+            color: var(--white);
+            border: 2px solid rgba(255, 255, 255, 0.5);
+        }
+
+        .modal-btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.4);
+            transform: translateY(-3px);
+        }
+
+        .modal-disclaimer {
+            margin-top: 1.5rem;
+            padding: 1rem;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+            font-size: 0.85rem;
+            text-align: center;
+            color: var(--white);
+        }
+
+        .close-modal {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: rgba(255, 255, 255, 0.3);
+            border: none;
+            color: var(--white);
+            font-size: 1.8rem;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+
+        .close-modal:hover {
+            background: rgba(255, 255, 255, 0.5);
+            transform: rotate(90deg);
+        }
+
+        @media (max-width: 768px) {
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+            
+            .modal-content {
+                padding: 1.5rem;
+            }
+            
+            .modal-buttons {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Animated stars background -->
+    <div class="stars" id="stars"><div class="star" style="left: 14.5191%; top: 84.0292%; width: 1.00373px; height: 1.00373px; animation-delay: 0.829857s;"></div><div class="star" style="left: 27.7086%; top: 39.0728%; width: 1.89248px; height: 1.89248px; animation-delay: 1.01571s;"></div><div class="star" style="left: 30.609%; top: 52.3738%; width: 3.25641px; height: 3.25641px; animation-delay: 2.68121s;"></div><div class="star" style="left: 25.6519%; top: 77.3131%; width: 1.47762px; height: 1.47762px; animation-delay: 2.02815s;"></div><div class="star" style="left: 39.9186%; top: 96.1591%; width: 2.38462px; height: 2.38462px; animation-delay: 2.20947s;"></div><div class="star" style="left: 36.6959%; top: 44.1861%; width: 3.1607px; height: 3.1607px; animation-delay: 2.0583s;"></div><div class="star" style="left: 12.2899%; top: 10.1132%; width: 3.03563px; height: 3.03563px; animation-delay: 1.86191s;"></div><div class="star" style="left: 53.1342%; top: 4.27954%; width: 3.01373px; height: 3.01373px; animation-delay: 0.182173s;"></div><div class="star" style="left: 73.6579%; top: 98.5243%; width: 1.67981px; height: 1.67981px; animation-delay: 1.36571s;"></div><div class="star" style="left: 14.3921%; top: 92.5575%; width: 2.86045px; height: 2.86045px; animation-delay: 2.02814s;"></div><div class="star" style="left: 45.0865%; top: 15.9648%; width: 3.22145px; height: 3.22145px; animation-delay: 0.721546s;"></div><div class="star" style="left: 41.8299%; top: 92.8297%; width: 3.50086px; height: 3.50086px; animation-delay: 0.908814s;"></div><div class="star" style="left: 74.6835%; top: 99.842%; width: 1.06794px; height: 1.06794px; animation-delay: 0.931155s;"></div><div class="star" style="left: 89.2098%; top: 79.6271%; width: 3.12861px; height: 3.12861px; animation-delay: 1.96376s;"></div><div class="star" style="left: 18.2909%; top: 25.3855%; width: 1.6131px; height: 1.6131px; animation-delay: 0.667093s;"></div><div class="star" style="left: 71.789%; top: 76.8045%; width: 1.45563px; height: 1.45563px; animation-delay: 2.74572s;"></div><div class="star" style="left: 74.4753%; top: 10.5691%; width: 2.63106px; height: 2.63106px; animation-delay: 1.94511s;"></div><div class="star" style="left: 53.9581%; top: 89.8193%; width: 3.73122px; height: 3.73122px; animation-delay: 0.391049s;"></div><div class="star" style="left: 66.4539%; top: 63.3978%; width: 3.75793px; height: 3.75793px; animation-delay: 1.65615s;"></div><div class="star" style="left: 25.9075%; top: 30.978%; width: 3.25864px; height: 3.25864px; animation-delay: 1.84823s;"></div><div class="star" style="left: 26.7059%; top: 1.45725%; width: 2.91476px; height: 2.91476px; animation-delay: 2.40211s;"></div><div class="star" style="left: 69.9691%; top: 57.2805%; width: 1.64784px; height: 1.64784px; animation-delay: 1.99288s;"></div><div class="star" style="left: 83.8176%; top: 95.2812%; width: 1.62629px; height: 1.62629px; animation-delay: 2.3143s;"></div><div class="star" style="left: 48.0625%; top: 50.5373%; width: 3.01398px; height: 3.01398px; animation-delay: 0.106298s;"></div><div class="star" style="left: 8.84277%; top: 51.6066%; width: 1.1701px; height: 1.1701px; animation-delay: 0.584799s;"></div><div class="star" style="left: 20.9319%; top: 78.0236%; width: 2.78987px; height: 2.78987px; animation-delay: 1.83474s;"></div><div class="star" style="left: 88.7636%; top: 50.1557%; width: 1.90059px; height: 1.90059px; animation-delay: 0.142688s;"></div><div class="star" style="left: 65.0358%; top: 18.4191%; width: 1.58731px; height: 1.58731px; animation-delay: 1.44442s;"></div><div class="star" style="left: 93.8066%; top: 37.9173%; width: 3.17609px; height: 3.17609px; animation-delay: 1.69359s;"></div><div class="star" style="left: 21.0466%; top: 79.8485%; width: 3.43224px; height: 3.43224px; animation-delay: 0.296787s;"></div><div class="star" style="left: 46.332%; top: 12.136%; width: 1.57102px; height: 1.57102px; animation-delay: 2.86006s;"></div><div class="star" style="left: 59.12%; top: 69.9446%; width: 3.86298px; height: 3.86298px; animation-delay: 0.108119s;"></div><div class="star" style="left: 1.53366%; top: 62.1943%; width: 3.76988px; height: 3.76988px; animation-delay: 1.39772s;"></div><div class="star" style="left: 64.7865%; top: 75.9896%; width: 3.83317px; height: 3.83317px; animation-delay: 2.52864s;"></div><div class="star" style="left: 53.7008%; top: 72.403%; width: 3.14979px; height: 3.14979px; animation-delay: 2.16108s;"></div><div class="star" style="left: 85.9382%; top: 15.2567%; width: 2.09737px; height: 2.09737px; animation-delay: 0.911514s;"></div><div class="star" style="left: 65.988%; top: 28.8221%; width: 3.69091px; height: 3.69091px; animation-delay: 2.77474s;"></div><div class="star" style="left: 99.6995%; top: 77.9075%; width: 3.51198px; height: 3.51198px; animation-delay: 2.06022s;"></div><div class="star" style="left: 9.08024%; top: 28.0338%; width: 3.2778px; height: 3.2778px; animation-delay: 1.90729s;"></div><div class="star" style="left: 17.1968%; top: 89.4821%; width: 1.46903px; height: 1.46903px; animation-delay: 0.623052s;"></div><div class="star" style="left: 59.364%; top: 29.4209%; width: 3.47666px; height: 3.47666px; animation-delay: 2.14072s;"></div><div class="star" style="left: 41.3356%; top: 63.1302%; width: 3.50533px; height: 3.50533px; animation-delay: 2.96561s;"></div><div class="star" style="left: 0.683977%; top: 5.02288%; width: 1.83837px; height: 1.83837px; animation-delay: 1.75973s;"></div><div class="star" style="left: 99.8576%; top: 79.959%; width: 3.33789px; height: 3.33789px; animation-delay: 0.568464s;"></div><div class="star" style="left: 4.63496%; top: 2.92852%; width: 3.50393px; height: 3.50393px; animation-delay: 1.47718s;"></div><div class="star" style="left: 31.3902%; top: 23.1148%; width: 1.81356px; height: 1.81356px; animation-delay: 0.0144222s;"></div><div class="star" style="left: 4.7991%; top: 2.96449%; width: 1.93728px; height: 1.93728px; animation-delay: 1.48138s;"></div><div class="star" style="left: 18.4644%; top: 4.0739%; width: 2.09793px; height: 2.09793px; animation-delay: 2.27993s;"></div><div class="star" style="left: 67.0497%; top: 17.924%; width: 2.90843px; height: 2.90843px; animation-delay: 1.83022s;"></div><div class="star" style="left: 99.4569%; top: 35.4209%; width: 1.45738px; height: 1.45738px; animation-delay: 1.88286s;"></div><div class="star" style="left: 27.2097%; top: 82.7778%; width: 3.22251px; height: 3.22251px; animation-delay: 0.181682s;"></div><div class="star" style="left: 23.3102%; top: 72.4462%; width: 2.91169px; height: 2.91169px; animation-delay: 1.09195s;"></div><div class="star" style="left: 5.63606%; top: 57.2435%; width: 3.51916px; height: 3.51916px; animation-delay: 1.0523s;"></div><div class="star" style="left: 86.8943%; top: 38.6122%; width: 1.50057px; height: 1.50057px; animation-delay: 1.05641s;"></div><div class="star" style="left: 4.86919%; top: 79.33%; width: 3.16552px; height: 3.16552px; animation-delay: 2.68136s;"></div><div class="star" style="left: 43.6108%; top: 77.9376%; width: 1.78923px; height: 1.78923px; animation-delay: 2.65032s;"></div><div class="star" style="left: 43.1852%; top: 22.2925%; width: 2.48305px; height: 2.48305px; animation-delay: 0.422793s;"></div><div class="star" style="left: 75.8846%; top: 47.5202%; width: 3.10723px; height: 3.10723px; animation-delay: 1.32849s;"></div><div class="star" style="left: 99.9273%; top: 2.64087%; width: 1.98062px; height: 1.98062px; animation-delay: 0.96375s;"></div><div class="star" style="left: 81.6418%; top: 10.3846%; width: 2.37528px; height: 2.37528px; animation-delay: 2.93688s;"></div><div class="star" style="left: 9.8062%; top: 22.4735%; width: 3.35015px; height: 3.35015px; animation-delay: 1.18443s;"></div><div class="star" style="left: 27.8219%; top: 78.0853%; width: 3.07122px; height: 3.07122px; animation-delay: 0.64583s;"></div><div class="star" style="left: 17.2876%; top: 87.5438%; width: 1.03713px; height: 1.03713px; animation-delay: 2.9668s;"></div><div class="star" style="left: 43.3465%; top: 34.036%; width: 3.94555px; height: 3.94555px; animation-delay: 0.333785s;"></div><div class="star" style="left: 61.2449%; top: 14.3774%; width: 2.82291px; height: 2.82291px; animation-delay: 0.978527s;"></div><div class="star" style="left: 2.71369%; top: 83.2908%; width: 2.89236px; height: 2.89236px; animation-delay: 0.999029s;"></div><div class="star" style="left: 71.1973%; top: 67.1371%; width: 3.26533px; height: 3.26533px; animation-delay: 1.22396s;"></div><div class="star" style="left: 26.1686%; top: 45.7328%; width: 1.03857px; height: 1.03857px; animation-delay: 0.895145s;"></div><div class="star" style="left: 45.6188%; top: 98.8898%; width: 2.2073px; height: 2.2073px; animation-delay: 0.0467279s;"></div><div class="star" style="left: 73.5342%; top: 48.9394%; width: 1.03675px; height: 1.03675px; animation-delay: 0.342544s;"></div><div class="star" style="left: 80.7067%; top: 6.48057%; width: 1.37697px; height: 1.37697px; animation-delay: 2.8128s;"></div><div class="star" style="left: 75.3455%; top: 35.7965%; width: 2.71618px; height: 2.71618px; animation-delay: 1.61309s;"></div><div class="star" style="left: 55.9288%; top: 39.4476%; width: 2.55739px; height: 2.55739px; animation-delay: 2.95805s;"></div><div class="star" style="left: 0.722772%; top: 41.3159%; width: 2.56637px; height: 2.56637px; animation-delay: 0.35982s;"></div><div class="star" style="left: 1.64458%; top: 90.5679%; width: 2.83742px; height: 2.83742px; animation-delay: 1.6384s;"></div><div class="star" style="left: 92.9114%; top: 71.3336%; width: 3.58558px; height: 3.58558px; animation-delay: 2.46581s;"></div><div class="star" style="left: 53.7887%; top: 46.1466%; width: 3.05723px; height: 3.05723px; animation-delay: 2.0887s;"></div><div class="star" style="left: 6.63852%; top: 66.3833%; width: 1.8543px; height: 1.8543px; animation-delay: 1.23413s;"></div><div class="star" style="left: 80.6518%; top: 20.286%; width: 1.89535px; height: 1.89535px; animation-delay: 1.79782s;"></div><div class="star" style="left: 91.6428%; top: 97.3961%; width: 1.94809px; height: 1.94809px; animation-delay: 1.20036s;"></div><div class="star" style="left: 64.6578%; top: 7.0357%; width: 2.84549px; height: 2.84549px; animation-delay: 2.91649s;"></div><div class="star" style="left: 39.7509%; top: 50.6307%; width: 2.9037px; height: 2.9037px; animation-delay: 2.62077s;"></div><div class="star" style="left: 1.10541%; top: 36.4136%; width: 1.12521px; height: 1.12521px; animation-delay: 2.72917s;"></div><div class="star" style="left: 40.1463%; top: 11.5882%; width: 1.82178px; height: 1.82178px; animation-delay: 2.25383s;"></div><div class="star" style="left: 87.8362%; top: 44.2982%; width: 2.73704px; height: 2.73704px; animation-delay: 1.12371s;"></div><div class="star" style="left: 18.1042%; top: 74.073%; width: 3.13507px; height: 3.13507px; animation-delay: 1.84121s;"></div><div class="star" style="left: 79.498%; top: 19.1962%; width: 1.13442px; height: 1.13442px; animation-delay: 0.571946s;"></div><div class="star" style="left: 31.081%; top: 61.1434%; width: 3.80567px; height: 3.80567px; animation-delay: 0.0172464s;"></div><div class="star" style="left: 54.2154%; top: 92.7366%; width: 2.16474px; height: 2.16474px; animation-delay: 0.296556s;"></div><div class="star" style="left: 84.1874%; top: 93.9223%; width: 1.98432px; height: 1.98432px; animation-delay: 2.86001s;"></div><div class="star" style="left: 42.2207%; top: 82.0496%; width: 3.05078px; height: 3.05078px; animation-delay: 1.44679s;"></div><div class="star" style="left: 3.80523%; top: 33.9489%; width: 2.01578px; height: 2.01578px; animation-delay: 1.92432s;"></div><div class="star" style="left: 4.10051%; top: 22.6272%; width: 2.77232px; height: 2.77232px; animation-delay: 0.788426s;"></div><div class="star" style="left: 56.0444%; top: 80.8273%; width: 2.39476px; height: 2.39476px; animation-delay: 1.73854s;"></div><div class="star" style="left: 29.33%; top: 2.22652%; width: 1.63795px; height: 1.63795px; animation-delay: 1.51046s;"></div><div class="star" style="left: 16.1441%; top: 52.1832%; width: 3.40845px; height: 3.40845px; animation-delay: 2.282s;"></div><div class="star" style="left: 9.18338%; top: 55.6578%; width: 3.25999px; height: 3.25999px; animation-delay: 0.467164s;"></div><div class="star" style="left: 55.502%; top: 64.5553%; width: 1.04543px; height: 1.04543px; animation-delay: 0.608824s;"></div><div class="star" style="left: 70.7404%; top: 66.4381%; width: 2.99048px; height: 2.99048px; animation-delay: 1.3752s;"></div><div class="star" style="left: 20.0539%; top: 31.4832%; width: 3.17712px; height: 3.17712px; animation-delay: 2.0953s;"></div></div>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo">✨ Astro Barbie Tarot ✨</div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="file:///C:/Users/barbi/AppData/Local/Temp/28015aba-9623-4b77-a46d-aee9bde5f5b4_astro-barbie-site.zip.5b4/index.html#home">Home</a></li>
+                <li><a href="file:///C:/Users/barbi/AppData/Local/Temp/28015aba-9623-4b77-a46d-aee9bde5f5b4_astro-barbie-site.zip.5b4/index.html#services">Services</a></li>
+                <li><a href="file:///C:/Users/barbi/AppData/Local/Temp/28015aba-9623-4b77-a46d-aee9bde5f5b4_astro-barbie-site.zip.5b4/index.html#about">About</a></li>
+                <li><a href="file:///C:/Users/barbi/AppData/Local/Temp/28015aba-9623-4b77-a46d-aee9bde5f5b4_astro-barbie-site.zip.5b4/index.html#contact">Contact</a></li>
+            </ul>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="moon"></div>
+        <div class="hero-content">
+            <h1>Astro Barbie Tarot</h1>
+            <p class="tagline">✨ Connecting You with Spirit Guides &amp; the Universe ✨</p>
+            <p class="welcome">
+                Welcome to a magical space where cosmic wisdom meets divine guidance. 
+                Let me help you find clarity, direction, and insight through the ancient art of tarot 
+                and the mystical language of the stars.
+            </p>
+            <div class="cta-buttons">
+                <a href="file:///C:/Users/barbi/AppData/Local/Temp/28015aba-9623-4b77-a46d-aee9bde5f5b4_astro-barbie-site.zip.5b4/index.html#services" class="btn btn-primary">Explore Services</a>
+                <a href="file:///C:/Users/barbi/AppData/Local/Temp/28015aba-9623-4b77-a46d-aee9bde5f5b4_astro-barbie-site.zip.5b4/index.html#about" class="btn btn-secondary">Learn More</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="section-header">
+            <h2>Mystical Services</h2>
+            <p>Choose from a variety of readings and cosmic guidance options</p>
+            <div class="divider"></div>
+        </div>
+
+        <div class="services-container">
+            <!-- General Tarot Readings -->
+            <div class="service-category">
+                <h3 class="category-title">General Tarot Readings</h3>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-icon">🔮</div>
+                        <h3>Single Card Pull Reading</h3>
+                        <p>Quick guidance and insight from the universe. Perfect for daily direction or a specific question.</p>
+                        <div class="service-price">$15</div>
+                        <button class="book-btn" onclick="openModal(&#39;Single Card Pull Reading&#39;, &#39;$15&#39;)">💖 Book &amp; Pay Now 💖</button>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-icon">🌟</div>
+                        <h3>Three Card Spread</h3>
+                        <p>Explore your past, present, and future. Understand the journey you're on and where it's leading.</p>
+                        <div class="service-price">$33</div>
+                        <button class="book-btn" onclick="openModal(&#39;Three Card Spread&#39;, &#39;$33&#39;)">💖 Book &amp; Pay Now 💖</button>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-icon">🎴</div>
+                        <h3>Celtic Cross Reading</h3>
+                        <p>Comprehensive 10-card spread providing deep insight into your situation, obstacles, and outcomes.</p>
+                        <div class="service-price">$55</div>
+                        <button class="book-btn" onclick="openModal(&#39;Celtic Cross Reading&#39;, &#39;$55&#39;)">💖 Book &amp; Pay Now 💖</button>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-icon">💖</div>
+                        <h3>Relationship Reading</h3>
+                        <p>Gain clarity on love, partnerships, and connections. Understand the dynamics and future potential.</p>
+                        <div class="service-price">$44</div>
+                        <button class="book-btn" onclick="openModal(&#39;Relationship Reading&#39;, &#39;$44&#39;)">💖 Book &amp; Pay Now 💖</button>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-icon">💼</div>
+                        <h3>Career Path Reading</h3>
+                        <p>Professional guidance for your career journey. Discover your true calling and next steps.</p>
+                        <div class="service-price">$44</div>
+                        <button class="book-btn" onclick="openModal(&#39;Career Path Reading&#39;, &#39;$44&#39;)">💖 Book &amp; Pay Now 💖</button>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-icon">⚖️</div>
+                        <h3>Decision Making Reading</h3>
+                        <p>Clarity on important choices. See the outcomes of different paths before you choose.</p>
+                        <div class="service-price">$33</div>
+                        <button class="book-btn" onclick="openModal(&#39;Decision Making Reading&#39;, &#39;$33&#39;)">💖 Book &amp; Pay Now 💖</button>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-icon">📅</div>
+                        <h3>Year Ahead Reading</h3>
+                        <p>12-month forecast covering all areas of your life. Plan your year with cosmic guidance.</p>
+                        <div class="service-price">$111</div>
+                        <button class="book-btn" onclick="openModal(&#39;Year Ahead Reading&#39;, &#39;$111&#39;)">💖 Book &amp; Pay Now 💖</button>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-icon">🌑</div>
+                        <h3>Shadow Work Reading</h3>
+                        <p>Deep inner healing and self-discovery. Face your shadows and embrace your light.</p>
+                        <div class="service-price">$55</div>
+                        <button class="book-btn" onclick="openModal(&#39;Shadow Work Reading&#39;, &#39;$55&#39;)">💖 Book &amp; Pay Now 💖</button>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-icon">🕊️</div>
+                        <h3>Spiritual Guidance Reading</h3>
+                        <p>Connect with your higher self and spirit guides. Receive divine messages and wisdom.</p>
+                        <div class="service-price">$44</div>
+                        <button class="book-btn" onclick="openModal(&#39;Spiritual Guidance Reading&#39;, &#39;$44&#39;)">💖 Book &amp; Pay Now 💖</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Specialized Readings -->
+            <div class="service-category">
+                <h3 class="category-title">Specialized Cosmic Readings</h3>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-icon">⭐</div>
+                        <h3>Birth Chart Reading</h3>
+                        <p>Full natal chart interpretation revealing your cosmic blueprint and life purpose.</p>
+                        <div class="service-price">$88</div>
+                        <button class="book-btn" onclick="openModal(&#39;Birth Chart Reading&#39;, &#39;$88&#39;, true)">💖 Book &amp; Pay Now 💖</button>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-icon">💕</div>
+                        <h3>Compatibility Reading</h3>
+                        <p>Synastry analysis between two people. Perfect for romantic or business partnerships.</p>
+                        <div class="service-price">$77</div>
+                        <button class="book-btn" onclick="openModal(&#39;Compatibility Reading&#39;, &#39;$77&#39;, true)">💖 Book &amp; Pay Now 💖</button>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-icon">🎂</div>
+                        <h3>Solar Return Reading</h3>
+                        <p>Birthday year forecast based on your solar return chart. What does your new year hold?</p>
+                        <div class="service-price">$66</div>
+                        <button class="book-btn" onclick="openModal(&#39;Solar Return Reading&#39;, &#39;$66&#39;, true)">💖 Book &amp; Pay Now 💖</button>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-icon">🌙</div>
+                        <h3>New Moon Intention Setting</h3>
+                        <p>Harness new moon energy to set powerful intentions and manifest your desires.</p>
+                        <div class="service-price">$33</div>
+                        <button class="book-btn" onclick="openModal(&#39;New Moon Intention Setting&#39;, &#39;$33&#39;)">💖 Book &amp; Pay Now 💖</button>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-icon">🌕</div>
+                        <h3>Full Moon Release Reading</h3>
+                        <p>Release what no longer serves you during the full moon. Let go and make space for new blessings.</p>
+                        <div class="service-price">$33</div>
+                        <button class="book-btn" onclick="openModal(&#39;Full Moon Release Reading&#39;, &#39;$33&#39;)">💖 Book &amp; Pay Now 💖</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Subscription Services -->
+            <div class="service-category">
+                <h3 class="category-title">Subscription Services</h3>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-icon">📖</div>
+                        <h3>Monthly Horoscope Subscription</h3>
+                        <p>Personalized monthly insights based on your birth chart. Know what cosmic energies are at play.</p>
+                        <div class="service-price">$44/mo</div>
+                        <button class="book-btn" onclick="openModal(&#39;Monthly Horoscope Subscription&#39;, &#39;$44/month&#39;, true)">💖 Subscribe Now 💖</button>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-icon">🃏</div>
+                        <h3>Weekly Tarot Guidance</h3>
+                        <p>Weekly card pulls and messages to guide you through each week with clarity and confidence.</p>
+                        <div class="service-price">$55/mo</div>
+                        <button class="book-btn" onclick="openModal(&#39;Weekly Tarot Guidance&#39;, &#39;$55/month&#39;)">💖 Subscribe Now 💖</button>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-icon">👑</div>
+                        <h3>VIP Cosmic Package</h3>
+                        <p>Combination of monthly horoscopes and weekly tarot readings. Full cosmic support all month long.</p>
+                        <div class="service-price">$88/mo</div>
+                        <button class="book-btn" onclick="openModal(&#39;VIP Cosmic Package&#39;, &#39;$88/month&#39;, true)">💖 Subscribe Now 💖</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="section-header">
+            <h2>About Your Guide</h2>
+            <p>Meet the cosmic connector behind the cards</p>
+            <div class="divider"></div>
+        </div>
+
+        <div class="about-container">
+            <div class="about-content">
+                <p>
+                    I have been practicing tarot for 5 years and wanted to do something to help people 
+                    who are lacking direction or need clarity, insight, or advice but don't know who to ask!
+                </p>
+                <p>
+                    Who's better than asking your spirit guides, or the universe, or higher power for answers? 
+                    I connect with those energies and deliver messages through tarot.
+                </p>
+                <div class="mission">
+                    <h3>✨ My Mission ✨</h3>
+                    <p>
+                        My purpose is to bridge the gap between you and the divine wisdom that surrounds us all. 
+                        Through tarot and cosmic guidance, I help you unlock the answers that already exist within 
+                        and around you. Every reading is a sacred conversation with the universe, tailored specifically 
+                        to illuminate your unique path.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="section-header">
+            <h2>Connect with the Cosmos</h2>
+            <p>Ready to receive your guidance? Let's connect!</p>
+            <div class="divider"></div>
+        </div>
+
+        <div class="contact-container">
+            <form class="contact-form" id="contactForm">
+                <div class="form-group">
+                    <label for="name">Name *</label>
+                    <input type="text" id="name" name="name" required="" placeholder="Your full name">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address *</label>
+                    <input type="email" id="email" name="email" required="" placeholder="your@email.com">
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" placeholder="(555) 123-4567">
+                </div>
+
+                <div class="form-group">
+                    <label for="service">Service Interested In *</label>
+                    <select id="service" name="service" required="">
+                        <option value="">-- Select a Service --</option>
+                        <option value="Single Card Pull Reading">Single Card Pull Reading</option>
+                        <option value="Three Card Spread">Three Card Spread</option>
+                        <option value="Celtic Cross Reading">Celtic Cross Reading</option>
+                        <option value="Relationship Reading">Relationship Reading</option>
+                        <option value="Career Path Reading">Career Path Reading</option>
+                        <option value="Decision Making Reading">Decision Making Reading</option>
+                        <option value="Year Ahead Reading">Year Ahead Reading</option>
+                        <option value="Shadow Work Reading">Shadow Work Reading</option>
+                        <option value="Spiritual Guidance Reading">Spiritual Guidance Reading</option>
+                        <option value="Birth Chart Reading">Birth Chart Reading</option>
+                        <option value="Compatibility Reading">Compatibility Reading</option>
+                        <option value="Solar Return Reading">Solar Return Reading</option>
+                        <option value="New Moon Intention Setting">New Moon Intention Setting</option>
+                        <option value="Full Moon Release Reading">Full Moon Release Reading</option>
+                        <option value="Monthly Horoscope Subscription">Monthly Horoscope Subscription</option>
+                        <option value="Weekly Tarot Guidance">Weekly Tarot Guidance</option>
+                        <option value="VIP Cosmic Package">VIP Cosmic Package</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Message *</label>
+                    <textarea id="message" name="message" required="" placeholder="Tell me about what guidance you&#39;re seeking..."></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn">Send Message ✨</button>
+                <div class="success-message" id="successMessage">
+                    ✨ Thank you! Your message has been received. I'll connect with you soon! ✨
+                </div>
+            </form>
+
+            <div class="contact-info">
+                <p style="color: var(--light-pink); margin-top: 2rem;">
+                    <strong>Email:</strong> <a href="mailto:astrobarbietarot@email.com" style="color: var(--gold);">astrobarbietarot@email.com</a>
+                </p>
+                <div class="social-links">
+                    <a href="https://instagram.com/" target="_blank" title="Instagram">📷</a>
+                    <a href="https://tiktok.com/" target="_blank" title="TikTok">🎵</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Modal -->
+    <div class="modal-overlay" id="bookingModal">
+        <div class="modal-content">
+            <button class="close-modal" onclick="closeModal()">×</button>
+            <div class="modal-header">
+                <h3 id="modalServiceName"></h3>
+                <div class="modal-price" id="modalServicePrice"></div>
+            </div>
+
+            <form id="bookingForm">
+                <!-- Payment Information -->
+                <div class="modal-section">
+                    <h4>💳 Payment Information</h4>
+                    <div class="modal-form-group">
+                        <label for="cardName">Cardholder Name *</label>
+                        <input type="text" id="cardName" name="cardName" required="" placeholder="Name on card">
+                    </div>
+                    <div class="modal-form-group">
+                        <label for="cardNumber">Card Number *</label>
+                        <input type="text" id="cardNumber" name="cardNumber" required="" placeholder="1234 5678 9012 3456" maxlength="19">
+                    </div>
+                    <div class="form-row">
+                        <div class="modal-form-group">
+                            <label for="expiration">Expiration *</label>
+                            <input type="text" id="expiration" name="expiration" required="" placeholder="MM/YY" maxlength="5">
+                        </div>
+                        <div class="modal-form-group">
+                            <label for="cvv">CVV *</label>
+                            <input type="text" id="cvv" name="cvv" required="" placeholder="123" maxlength="4">
+                        </div>
+                    </div>
+                    <div class="modal-form-group">
+                        <label for="zipCode">Zip Code *</label>
+                        <input type="text" id="zipCode" name="zipCode" required="" placeholder="12345" maxlength="10">
+                    </div>
+                </div>
+
+                <!-- Contact Information -->
+                <div class="modal-section">
+                    <h4>📧 Contact Information</h4>
+                    <div class="modal-form-group">
+                        <label for="clientName">Your Name *</label>
+                        <input type="text" id="clientName" name="clientName" required="" placeholder="Full name">
+                    </div>
+                    <div class="modal-form-group">
+                        <label for="clientEmail">Email Address *</label>
+                        <input type="email" id="clientEmail" name="clientEmail" required="" placeholder="your@email.com">
+                    </div>
+                    <div class="modal-form-group">
+                        <label for="clientPhone">Phone Number *</label>
+                        <input type="tel" id="clientPhone" name="clientPhone" required="" placeholder="(555) 123-4567">
+                    </div>
+                    <div class="modal-form-group">
+                        <label for="contactMethod">Preferred Contact Method *</label>
+                        <select id="contactMethod" name="contactMethod" required="">
+                            <option value="">-- Select --</option>
+                            <option value="email">Email</option>
+                            <option value="phone">Phone</option>
+                            <option value="text">Text Message</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Birth Chart Information (conditional) -->
+                <div class="modal-section" id="birthChartSection" style="display: none;">
+                    <h4>🌟 Birth Chart Information</h4>
+                    <div class="modal-form-group">
+                        <label for="birthDate">Birth Date *</label>
+                        <input type="date" id="birthDate" name="birthDate">
+                    </div>
+                    <div class="modal-form-group">
+                        <label for="birthTime">Birth Time *</label>
+                        <input type="time" id="birthTime" name="birthTime">
+                    </div>
+                    <div class="modal-form-group">
+                        <label for="birthPlace">Birth Place (City, State/Country) *</label>
+                        <input type="text" id="birthPlace" name="birthPlace" placeholder="Los Angeles, CA">
+                    </div>
+                </div>
+
+                <!-- Question/Guidance -->
+                <div class="modal-section">
+                    <h4>✨ Your Question or Area of Focus</h4>
+                    <div class="modal-form-group">
+                        <label for="question">What guidance are you seeking? *</label>
+                        <textarea id="question" name="question" required="" placeholder="Share what you&#39;d like clarity or insight on..."></textarea>
+                    </div>
+                </div>
+
+                <!-- Buttons -->
+                <div class="modal-buttons">
+                    <button type="button" class="modal-btn modal-btn-secondary" onclick="closeModal()">Cancel</button>
+                    <button type="submit" class="modal-btn modal-btn-primary">Complete Booking ✨</button>
+                </div>
+
+                <div class="modal-disclaimer">
+                    🔮 Your reading will be delivered within 24-48 hours via your preferred contact method. All information is kept confidential.
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>✨ Astro Barbie Tarot © 2025 | Connecting You with Divine Guidance ✨</p>
+        <p style="margin-top: 0.5rem; font-size: 0.8rem;">All readings are for entertainment and spiritual guidance purposes.</p>
+    </footer>
+
+    <script>
+        // Generate animated stars
+        function createStars() {
+            const starsContainer = document.getElementById('stars');
+            const numberOfStars = 100;
+
+            for (let i = 0; i < numberOfStars; i++) {
+                const star = document.createElement('div');
+                star.className = 'star';
+                star.style.left = Math.random() * 100 + '%';
+                star.style.top = Math.random() * 100 + '%';
+                star.style.width = Math.random() * 3 + 1 + 'px';
+                star.style.height = star.style.width;
+                star.style.animationDelay = Math.random() * 3 + 's';
+                starsContainer.appendChild(star);
+            }
+        }
+
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const navLinks = document.getElementById('navLinks');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+            });
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const navHeight = document.querySelector('nav').offsetHeight;
+                    const targetPosition = target.offsetTop - navHeight;
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Scroll to contact with service pre-selected
+        function scrollToContact(serviceName) {
+            const serviceSelect = document.getElementById('service');
+            serviceSelect.value = serviceName;
+            
+            const contactSection = document.getElementById('contact');
+            const navHeight = document.querySelector('nav').offsetHeight;
+            const targetPosition = contactSection.offsetTop - navHeight;
+            
+            window.scrollTo({
+                top: targetPosition,
+                behavior: 'smooth'
+            });
+        }
+
+        // Form submission handler
+        const contactForm = document.getElementById('contactForm');
+        const successMessage = document.getElementById('successMessage');
+
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            // Show success message
+            successMessage.style.display = 'block';
+            
+            // Reset form
+            contactForm.reset();
+            
+            // Hide success message after 5 seconds
+            setTimeout(() => {
+                successMessage.style.display = 'none';
+            }, 5000);
+        });
+
+        // Initialize stars on page load
+        window.addEventListener('load', createStars);
+
+        // Modal functionality
+        let currentService = '';
+        let currentPrice = '';
+        let requiresBirthChart = false;
+
+        function openModal(serviceName, price, needsBirthChart = false) {
+            currentService = serviceName;
+            currentPrice = price;
+            requiresBirthChart = needsBirthChart;
+
+            document.getElementById('modalServiceName').textContent = serviceName;
+            document.getElementById('modalServicePrice').textContent = price;
+            document.getElementById('bookingModal').classList.add('active');
+            document.body.style.overflow = 'hidden';
+
+            // Show/hide birth chart section
+            const birthChartSection = document.getElementById('birthChartSection');
+            if (needsBirthChart) {
+                birthChartSection.style.display = 'block';
+                document.getElementById('birthDate').required = true;
+                document.getElementById('birthTime').required = true;
+                document.getElementById('birthPlace').required = true;
+            } else {
+                birthChartSection.style.display = 'none';
+                document.getElementById('birthDate').required = false;
+                document.getElementById('birthTime').required = false;
+                document.getElementById('birthPlace').required = false;
+            }
+        }
+
+        function closeModal() {
+            document.getElementById('bookingModal').classList.remove('active');
+            document.body.style.overflow = 'auto';
+            document.getElementById('bookingForm').reset();
+        }
+
+        // Close modal when clicking outside
+        document.getElementById('bookingModal').addEventListener('click', (e) => {
+            if (e.target.id === 'bookingModal') {
+                closeModal();
+            }
+        });
+
+        // Format card number with spaces
+        document.getElementById('cardNumber').addEventListener('input', (e) => {
+            let value = e.target.value.replace(/\s/g, '');
+            let formattedValue = value.match(/.{1,4}/g)?.join(' ') || value;
+            e.target.value = formattedValue;
+        });
+
+        // Format expiration date
+        document.getElementById('expiration').addEventListener('input', (e) => {
+            let value = e.target.value.replace(/\D/g, '');
+            if (value.length >= 2) {
+                value = value.slice(0, 2) + '/' + value.slice(2, 4);
+            }
+            e.target.value = value;
+        });
+
+        // Only allow numbers in CVV and zip
+        document.getElementById('cvv').addEventListener('input', (e) => {
+            e.target.value = e.target.value.replace(/\D/g, '');
+        });
+
+        document.getElementById('zipCode').addEventListener('input', (e) => {
+            e.target.value = e.target.value.replace(/[^0-9-]/g, '');
+        });
+
+        // Booking form submission
+        document.getElementById('bookingForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            // In a real application, this would process the payment and send booking details
+            alert(`✨ Booking Confirmed! ✨\n\nService: ${currentService}\nPrice: ${currentPrice}\n\nThank you for booking with Astro Barbie Tarot! You will receive your reading within 24-48 hours via your preferred contact method. Check your email for confirmation details.`);
+            
+            closeModal();
+        });
+    </script>
+
+</body></html>
